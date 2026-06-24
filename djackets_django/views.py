@@ -1,3 +1,4 @@
+import os
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth.tokens import default_token_generator
@@ -85,7 +86,8 @@ def forgot_password(request):
     uid = urlsafe_base64_encode(force_bytes(user.pk))
 
     # Send reset email
-    reset_link = f"http://localhost:3000/reset-password/{uid}/{token}/"
+    FRONTEND_URL = os.environ.get('FRONTEND_URL', 'http://localhost:3000')
+    reset_link = f"{FRONTEND_URL}/reset-password/{uid}/{token}/"
 
     try:
         send_mail(

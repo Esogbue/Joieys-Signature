@@ -53,6 +53,7 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://JoieysSignature.pythonanywhere.com",
 ]
 
 # REST Framework settings
