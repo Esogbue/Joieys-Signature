@@ -1,0 +1,26 @@
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+.env
+media/
+
+# React
+djackets_react/node_modules/
+djackets_react/build/
+djackets_react/.env
+
+# VS Code
+.vscode/
+
+# Python
+*.pyo
+*.pyd
+.Python
+env/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
