@@ -28,7 +28,7 @@ const Login = ({ signup }) => {
 
     try {
       if (isLogin) {
-        const res = await axios.post('http://127.0.0.1:8000/api/v1/login/', {
+        const res = await axios.post('https://joieyssignature.pythonanywhere.com/api/v1/login/', {
           email: form.email,
           password: form.password,
         })
@@ -42,7 +42,7 @@ const Login = ({ signup }) => {
           setLoading(false)
           return
         }
-        await axios.post('http://127.0.0.1:8000/api/v1/register/', {
+        await axios.post('https://joieyssignature.pythonanywhere.com/api/v1/register/', {
           username: form.email.split('@')[0],
           email: form.email,
           password: form.password,

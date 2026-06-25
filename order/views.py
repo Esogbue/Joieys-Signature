@@ -90,7 +90,7 @@ ITEMS ORDERED:
 {items_text}
 
 Login to admin to update order status:
-http://127.0.0.1:8000/admin/order/order/{order.id}/change/
+https://joieyssignature.pythonanywhere.com/admin/order/order/{order.id}/change/
                         """,
                         from_email=settings.DEFAULT_FROM_EMAIL,
                         recipient_list=[settings.STORE_OWNER_EMAIL],

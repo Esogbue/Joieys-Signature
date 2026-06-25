@@ -27,7 +27,7 @@ const ResetPassword = () => {
     setError('')
 
     try {
-      await axios.post('http://127.0.0.1:8000/api/v1/reset-password/', {
+      await axios.post('https://joieyssignature.pythonanywhere.com/api/v1/reset-password/', {
         uid,
         token,
         new_password: form.new_password,

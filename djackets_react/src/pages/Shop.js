@@ -15,7 +15,7 @@ const Shop = () => {
 
   const fetchAllProducts = (page = 1) => {
     setLoading(true)
-    axios.get(`http://127.0.0.1:8000/api/v1/all-products/?page=${page}`)
+    axios.get(`https://joieyssignature.pythonanywhere.com/api/v1/all-products/?page=${page}`)
       .then(res => {
         setProducts(res.data.results)
         setTotalCount(res.data.count)
@@ -31,7 +31,7 @@ const Shop = () => {
 
   const fetchCategoryProducts = (categorySlug, page = 1) => {
     setLoading(true)
-    axios.get(`http://127.0.0.1:8000/api/v1/products/${categorySlug}/?page=${page}`)
+    axios.get(`https://joieyssignature.pythonanywhere.com/api/v1/products/${categorySlug}/?page=${page}`)
       .then(res => {
         setProducts(res.data.results)
         setTotalCount(res.data.count)
@@ -51,7 +51,7 @@ const Shop = () => {
     const urlSearch = params.get('search')
     if (urlSearch) setSearch(urlSearch)
 
-    axios.get('http://127.0.0.1:8000/api/v1/categories/')
+    axios.get('https://joieyssignature.pythonanywhere.com/api/v1/categories/')
       .then(res => setCategories(res.data))
       .catch(err => console.log(err))
 

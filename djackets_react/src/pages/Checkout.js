@@ -63,7 +63,7 @@ const Checkout = () => {
       callback: function(response) {
         // Payment successful — verify with backend
         const token = localStorage.getItem('token')
-        axios.post('http://127.0.0.1:8000/api/v1/checkout/', {
+        axios.post('https://joieyssignature.pythonanywhere.com/api/v1/checkout/', {
           ...form,
           paystack_token: response.reference,
           items: cartItems.map(item => ({

@@ -15,7 +15,7 @@ const OrderDetail = () => {
       return
     }
 
-    axios.get('http://127.0.0.1:8000/api/v1/orders/', {
+    axios.get('https://joieyssignature.pythonanywhere.com/api/v1/orders/', {
       headers: { Authorization: `Token ${token}` }
     })
       .then(res => {

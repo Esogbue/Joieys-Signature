@@ -91,7 +91,7 @@ const Home = () => {
 
   useEffect(() => {
     document.title = "Joiey's Signature — Home"
-    axios.get('http://127.0.0.1:8000/api/v1/latest-products/')
+    axios.get('https://joieyssignature.pythonanywhere.com/api/v1/latest-products/')
       .then(res => setProducts(res.data))
       .catch(err => console.log(err))
   }, [])

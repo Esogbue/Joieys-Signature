@@ -17,7 +17,7 @@ const ForgotPassword = () => {
     setError('')
 
     try {
-      await axios.post('http://127.0.0.1:8000/api/v1/forgot-password/', { email })
+      await axios.post('https://joieyssignature.pythonanywhere.com/api/v1/forgot-password/', { email })
       setSent(true)
     } catch (err) {
       setError('Something went wrong. Please try again.')

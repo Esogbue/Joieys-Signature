@@ -13,7 +13,7 @@ const ProductDetail = () => {
   const [sizeError, setSizeError] = useState(false)
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/v1/products/${categorySlug}/${productSlug}/`)
+    axios.get(`https://joieyssignature.pythonanywhere.com/api/v1/products/${categorySlug}/${productSlug}/`)
       .then(res => {
         setProduct(res.data)
         document.title = `${res.data.name} — Joiey's Signature`
