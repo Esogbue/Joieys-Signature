@@ -51,10 +51,10 @@ INSTALLED_APPS = [
     'order'
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "https://JoieysSignature.pythonanywhere.com",
-]
+CORS_ALLOWED_ORIGINS = os.environ.get(
+    'CORS_ALLOWED_ORIGINS',
+    'http://localhost:3000'
+).split(',')
 
 # REST Framework settings
 REST_FRAMEWORK = {
